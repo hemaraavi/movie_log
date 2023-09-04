@@ -117,7 +117,8 @@ body {
 
 .container {
   background-color: #151515;
-  min-height: calc(100vh - 50px);
+  min-height: 100vh;
+  margin-top: 50px;
   color: white;
 }
 
