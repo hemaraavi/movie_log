@@ -146,6 +146,9 @@ body {
   background: linear-gradient(90deg,#000000,#3500D3);
   color: white;
   padding: 10px 20px;
+  box-sizing: border-box;
+  outline: solid 0.5px transparent;
+  margin: 5px;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -154,7 +157,8 @@ body {
 
 .featured-button:hover{
   cursor: pointer;
-  border: 1px solid #3500D3;
+  box-sizing: border-box;
+  outline: 1px solid #3500D3;
 }
 
 
@@ -302,7 +306,7 @@ body {
 }
 .main-blog-card:hover {
   transform: translate3D(0,-1px,-1px) scale(1.01);
-  transition: all 0.5s  ease-out;
+  transition: all 0.2s  ease;
 }
 
 .main-blog-card .blog-summary{
