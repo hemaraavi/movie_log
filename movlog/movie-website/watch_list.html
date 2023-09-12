@@ -11,8 +11,9 @@
       rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="log_css/home.css">
+  <link rel="stylesheet" href="log_css/watch_list.css">
 
 
 </head>
@@ -46,96 +47,39 @@
         </div>
     </div>
   </div>
-  <section class="container">
-    <div class=" py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100 content-container">
-        <div class="col col-xl-10">
-  
-          <div class="card" style="border-radius: 15px;">
-            <div class="card-body p-5">
-  
-              <h6 class="mb-3">some Todo List</h6>
-  
-              <form class="d-flex justify-content-center align-items-center mb-4">
-                <div class="form-outline flex-fill">
-                  <input type="text" id="form3" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3">What do you need to do today?</label>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg ms-2">Add</button>
-              </form>
-  
-              <ul class="list-group mb-0">
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                    Cras justo odio
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-                <li
-                  class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
-                    <s>Dapibus ac facilisis in</s>
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-                <li
-                  class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                    Morbi leo risus
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-                <li
-                  class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                    Porta ac consectetur ac
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-                <li
-                  class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-0">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
-                    Vestibulum at eros
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                    Morbi leo risus
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-              </ul>
-  
-            </div>
-          </div>
-  
-        </div>
-      </div>
+  <div class="todo-app">
+    <form class="input-section">
+      <input id="todoInput" type="text" placeholder="Add Your Next Watch..." />
+      <button class="featured-button" id="addBtn"  type="submit" class="add">Add</button>
+      <button
+        type="button"
+        class="add"
+        id="update-button"
+        style="display: none"
+      >
+        Update
+      </button>
+      <!-- <input type="text" id="search-input" placeholder="Search" />
+      <button type="button" id="search-button">Search</button> -->
+    </form>
+    <div class="todos">
+      <ul class="todo-list">
+        <!-- <li class="li">
+        <input class="form-check-input" type="checkbox" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1"></label>
+        <span class="todo-text">text</span>
+        <span class="todo-text">date</span>
+        <span class="span-button"><i class="fa-solid fa-trash"></i></span>
+        <span class="span-button"><i class="fa-solid fa-pen"></i></span>
+      </li> -->
+      </ul>
+      <!--       
+      <img class="face" src="asetes/thinking.png" alt="">
+      <h1 class="not-found"> NOT FOUND</h1> -->
     </div>
-</section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
-
+  </div>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script> -->
+<script src="log_js/watch_list.js"></script>
 </body>
 </html>
 
