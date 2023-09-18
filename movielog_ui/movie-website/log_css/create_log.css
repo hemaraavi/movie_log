@@ -17,7 +17,7 @@
   display: flex;
   gap: 20px;
   margin-bottom: 22px;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: flex-start;
 }
 .formbold-input-flex > div {
@@ -28,6 +28,11 @@
 .formbold-textarea {
   display: flex;
   flex-direction: column-reverse;
+}
+#mytextarea{
+  height: 500px;
+  border-radius: 25px;
+
 }
 
 .formbold-form-input {
@@ -44,7 +49,7 @@
   resize: none;
 }
 .formbold-form-input::placeholder {
-  color: #dfe1e8;
+  color: #5f6474;
 }
 .formbold-form-input:focus {
   border-color: #dddde7;
@@ -52,10 +57,13 @@
 .formbold-form-label {
   color: #FFFFFF;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
+  font-style: bold;
+  font-weight: bold;
   line-height: 24px;
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
+  margin-top: 12px;
   flex-direction: column-reverse;
 }
 .formbold-form-input:focus + .formbold-form-label {
